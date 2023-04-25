@@ -1,0 +1,179 @@
+.game {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    background: url("img/fon3.jpg") no-repeat center;
+    overflow: hidden;
+    border-top: 2px solid #ad600b;
+    border-right: 2px solid #ad600b;
+    border-left: 2px solid #ad600b;
+    border-bottom: 10px solid #ad600b;
+    display: none;
+}
+
+#dino {
+    width: 35px;
+    height: 68px;
+    background: url("img/ghost-svgrepo-com2.svg") left no-repeat;
+    background-size: 45px 75px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.dino {
+    animation: steam 0.8s infinite;
+}
+
+#kaktus {
+    width: 36px;
+    height: 36px;
+    background: url("img/grave-svgrepo-com.svg") no-repeat center;
+    background-size: 95px 45px;
+    position: absolute;
+    bottom: 0;
+    right: -27px;
+    animation: cactus 2.1s infinite linear;
+}
+
+#pause {
+    background: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 50%;
+}
+
+#gameOver {
+    font-family: "Curlz MT";
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 150px;
+    width: 300px;
+    height: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #be2828;
+    box-shadow: 33px 19px 44px -5px rgba(0,0,0,0.44);
+}
+
+#run {
+    background: #49de0f;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    display: none;
+    border-radius: 50%;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.running {
+    animation-play-state: running;
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+#start {
+    font-family: "Curlz MT";
+    width: 100px;
+    height: 50px;
+    border: 5px solid #111;
+    background: #be2828;
+    margin: 300px auto;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: 10px 8px 5px 0px rgba(0,0,0,0.44);
+}
+
+.startClosed {
+    display: none;
+}
+
+.dinoDisap {
+    animation: dinoDisap 100s ease-in-out;
+}
+
+
+
+@keyframes steam {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 1%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cactus {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
+@keyframes dinoDisap {
+    0% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 0;
+        bottom: 5%
+    }
+
+    5% {
+        bottom: 10%
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 100%
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+    25% {
+        bottom: 80px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    75% {
+        bottom: 200px;
+    }
+
+    90% {
+        bottom: 80px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+
